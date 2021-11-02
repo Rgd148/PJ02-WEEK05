@@ -22,6 +22,7 @@
 		24349F382731AC55009EEE63 /* TSKINCAREBANNERTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24349F362731AC55009EEE63 /* TSKINCAREBANNERTableViewCell.xib */; };
 		24349F3B2731AC72009EEE63 /* SKINCAREITEMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24349F392731AC72009EEE63 /* SKINCAREITEMTableViewCell.swift */; };
 		24349F3C2731AC72009EEE63 /* SKINCAREITEMTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24349F3A2731AC72009EEE63 /* SKINCAREITEMTableViewCell.xib */; };
+		24349F3E2731DD1A009EEE63 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24349F3D2731DD1A009EEE63 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		24349F362731AC55009EEE63 /* TSKINCAREBANNERTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TSKINCAREBANNERTableViewCell.xib; sourceTree = "<group>"; };
 		24349F392731AC72009EEE63 /* SKINCAREITEMTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKINCAREITEMTableViewCell.swift; sourceTree = "<group>"; };
 		24349F3A2731AC72009EEE63 /* SKINCAREITEMTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SKINCAREITEMTableViewCell.xib; sourceTree = "<group>"; };
+		24349F3D2731DD1A009EEE63 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,11 +82,6 @@
 				24349F2127315EBB009EEE63 /* Info.plist */,
 				24349F1527315EBA009EEE63 /* SceneDelegate.swift */,
 				24349F1327315EBA009EEE63 /* AppDelegate.swift */,
-				24349F332731AC25009EEE63 /* SKINCARETableVC.swift */,
-				24349F352731AC55009EEE63 /* TSKINCAREBANNERTableViewCell.swift */,
-				24349F392731AC72009EEE63 /* SKINCAREITEMTableViewCell.swift */,
-				24349F362731AC55009EEE63 /* TSKINCAREBANNERTableViewCell.xib */,
-				24349F3A2731AC72009EEE63 /* SKINCAREITEMTableViewCell.xib */,
 			);
 			path = seporaV1;
 			sourceTree = "<group>";
@@ -92,9 +89,13 @@
 		24349F312731AA19009EEE63 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				24349F3D2731DD1A009EEE63 /* LoginViewController.swift */,
 				24349F2727317835009EEE63 /* MAKEUPTableVC.swift */,
 				24349F2927317881009EEE63 /* MAKEUPBANNERTableViewCell.swift */,
 				24349F2D273178AD009EEE63 /* MAKEUPITEMTableViewCell.swift */,
+				24349F332731AC25009EEE63 /* SKINCARETableVC.swift */,
+				24349F352731AC55009EEE63 /* TSKINCAREBANNERTableViewCell.swift */,
+				24349F392731AC72009EEE63 /* SKINCAREITEMTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,6 +107,8 @@
 				24349F1E27315EBB009EEE63 /* LaunchScreen.storyboard */,
 				24349F2A27317881009EEE63 /* MAKEUPBANNERTableViewCell.xib */,
 				24349F2E273178AD009EEE63 /* MAKEUPITEMTableViewCell.xib */,
+				24349F362731AC55009EEE63 /* TSKINCAREBANNERTableViewCell.xib */,
+				24349F3A2731AC72009EEE63 /* SKINCAREITEMTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24349F3E2731DD1A009EEE63 /* LoginViewController.swift in Sources */,
 				24349F1427315EBA009EEE63 /* AppDelegate.swift in Sources */,
 				24349F1627315EBA009EEE63 /* SceneDelegate.swift in Sources */,
 				24349F2B27317881009EEE63 /* MAKEUPBANNERTableViewCell.swift in Sources */,
