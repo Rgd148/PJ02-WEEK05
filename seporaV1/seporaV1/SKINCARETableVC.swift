@@ -15,16 +15,24 @@ struct SkincareItems {
 }
 
 class SKINCARETableVC: UITableViewController {
-
+    var Sproduct : [SkincareItems] = [SkincareItems(Sname: "CLINIQUE", Sdec:  " Take The Day Off Cleansing Balm Makeup Remover ", Scost: 180, Simage: UIImage(named: "CLINIQUE")),
+          SkincareItems(Sname: "Sephora skincare collection", Sdec: "Vitamin Face Mask Mango and vitamin B6 face mask", Scost: 50, Simage: UIImage(named: "skincare1")),
+        SkincareItems(Sname: "Overnight Hair Mask", Sdec: "Nourishing, fortifying, shine, restructuring... our masks care for all types of hair!", Scost: 40, Simage: UIImage(named: "skincare2")),
+         SkincareItems(Sname: "Hydrating Hair Mask", Sdec: "An hydrating mask that takes care of your hair", Scost: 70, Simage: UIImage(named: "hair3")),
+         SkincareItems(Sname: "Sephora Collection Hair Mask", Sdec: "Sephora Collection Hydrating Hair Mask", Scost: 35, Simage: UIImage(named: "skincare3"))]
+    
+   
+   
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+       
+        tableView.register(UINib(nibName: "TSKINCAREBANNERTableViewCell", bundle: nil), forCellReuseIdentifier: "SBannerID")
+        
+        
+        tableView.register(UINib(nibName: "SKINCAREITEMTableViewCell", bundle: nil), forCellReuseIdentifier: "SItemID")
+        tableView.rowHeight = 160
     }
 
     // MARK: - Table view data source
@@ -36,20 +44,37 @@ class SKINCARETableVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        
-        return 0
+        if section == 0 {
+            return 1
+        } else {
+            return Sproduct.count
+        }
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        
+        if indexPath.section == 0 {
+        let cellSBanner = tableView.dequeueReusableCell(withIdentifier: "SBannerID") as! TSKINCAREBANNERTableViewCell
+        
+            return cellSBanner
+            
+        }
+        else {
+   let cellSProduct = tableView.dequeueReusableCell(withIdentifier: "SItemID") as! SKINCAREITEMTableViewCell
+            
+            
+            cellSProduct.SItemName.text = Sproduct[indexPath.row].Sname
+            
+            cellSProduct.SItemDec.text = Sproduct[indexPath.row].Sdec
+            
+            cellSProduct.SItemCost.text = String(Sproduct[indexPath.row].Scost)
+            cellSProduct.SItemImage.image = Sproduct[indexPath.row].Simage
+            
+            return cellSProduct
+        }
+    
     }
-    */
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -58,17 +83,18 @@ class SKINCARETableVC: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            Sproduct.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
+            tableView.reloadData()
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+   
 
     /*
     // Override to support rearranging the table view.
