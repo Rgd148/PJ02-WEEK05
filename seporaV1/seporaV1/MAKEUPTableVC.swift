@@ -15,17 +15,22 @@ struct MakeupItems {
 }
 
 class MAKEUPTableVC: UITableViewController {
-  
+    var Mproduct : [MakeupItems] = [MakeupItems(Mname: "Blush", Mdec: "A long-lasting, blendable, multiuse liquid pigment for your cheeks,  lips and eyes.", Mcost: 80, Mimage: UIImage(named: "s2440212.png")),
+    MakeupItems(Mname: "Concealer", Mdec: "Soft Matte Complete Concealer", Mcost: 170, Mimage: UIImage(named: "concelar")),
+    MakeupItems(Mname: "Palette", Mdec: "Eyestories Eyeshadow Palette", Mcost: 88, Mimage: UIImage(named: "palette")),
+    MakeupItems(Mname: "Lipstick", Mdec: "Matte Revolution Lipstick", Mcost: 70, Mimage: UIImage(named: "Lipstick")),
+    MakeupItems(Mname: "bareMinerals", Mdec: "Strength & Length Serum-Infused Mascara", Mcost: 113, Mimage: UIImage(named: "bareMinerals"))]
+    /*
+  (title: "CLINIQUE", details: " Take The Day Off Cleansing Balm Makeup Remover ", cost: 170, imagItem:UIImage(named: "CLINIQUE"))*/
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.register(UINib(nibName: "MAKEUPBANNERTableViewCell", bundle: nil), forCellReuseIdentifier: "MBannerID")
+        
+        
+        tableView.register(UINib(nibName: "MAKEUPITEMTableViewCell", bundle: nil), forCellReuseIdentifier: "MItemID")
+        tableView.rowHeight = 160
     }
 
     // MARK: - Table view data source
@@ -37,7 +42,11 @@ class MAKEUPTableVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if section == 0 {
+            return 1
+        } else {
+            return Mproduct.count
+        }
     }
 
     /*
