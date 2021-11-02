@@ -64,17 +64,17 @@
 		24349F1227315EBA009EEE63 /* seporaV1 */ = {
 			isa = PBXGroup;
 			children = (
-				24349F1327315EBA009EEE63 /* AppDelegate.swift */,
-				24349F1527315EBA009EEE63 /* SceneDelegate.swift */,
 				24349F2727317835009EEE63 /* MAKEUPTableVC.swift */,
 				24349F2927317881009EEE63 /* MAKEUPBANNERTableViewCell.swift */,
 				24349F2D273178AD009EEE63 /* MAKEUPITEMTableViewCell.swift */,
 				24349F1927315EBA009EEE63 /* Main.storyboard */,
-				24349F2E273178AD009EEE63 /* MAKEUPITEMTableViewCell.xib */,
 				24349F2A27317881009EEE63 /* MAKEUPBANNERTableViewCell.xib */,
+				24349F2E273178AD009EEE63 /* MAKEUPITEMTableViewCell.xib */,
 				24349F1C27315EBB009EEE63 /* Assets.xcassets */,
 				24349F1E27315EBB009EEE63 /* LaunchScreen.storyboard */,
 				24349F2127315EBB009EEE63 /* Info.plist */,
+				24349F1527315EBA009EEE63 /* SceneDelegate.swift */,
+				24349F1327315EBA009EEE63 /* AppDelegate.swift */,
 			);
 			path = seporaV1;
 			sourceTree = "<group>";

@@ -7,7 +7,16 @@
 
 import UIKit
 
+struct MakeupItems {
+    var Mname:String = ""
+    var Mdec:String = " "
+    var Mcost: Double = 0
+    var Mimage: UIImage?
+}
+
 class MAKEUPTableVC: UITableViewController {
+  
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +32,7 @@ class MAKEUPTableVC: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

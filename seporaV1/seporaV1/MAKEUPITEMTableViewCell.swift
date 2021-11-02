@@ -9,6 +9,14 @@ import UIKit
 
 class MAKEUPITEMTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var MItemImage: UIImageView!
+    @IBOutlet weak var MItemName: UILabel!
+    @IBOutlet weak var MItemDec: UILabel!
+    @IBOutlet weak var MItemCost: UILabel!
+@IBAction func AddMItem(_ sender: Any) {
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

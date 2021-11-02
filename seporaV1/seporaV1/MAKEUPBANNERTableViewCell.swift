@@ -8,6 +8,8 @@
 import UIKit
 
 class MAKEUPBANNERTableViewCell: UITableViewCell {
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
