@@ -12,6 +12,11 @@
 		24349F1B27315EBA009EEE63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24349F1927315EBA009EEE63 /* Main.storyboard */; };
 		24349F1D27315EBB009EEE63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24349F1C27315EBB009EEE63 /* Assets.xcassets */; };
 		24349F2027315EBB009EEE63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24349F1E27315EBB009EEE63 /* LaunchScreen.storyboard */; };
+		24349F2827317835009EEE63 /* MAKEUPTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24349F2727317835009EEE63 /* MAKEUPTableVC.swift */; };
+		24349F2B27317881009EEE63 /* MAKEUPBANNERTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24349F2927317881009EEE63 /* MAKEUPBANNERTableViewCell.swift */; };
+		24349F2C27317881009EEE63 /* MAKEUPBANNERTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24349F2A27317881009EEE63 /* MAKEUPBANNERTableViewCell.xib */; };
+		24349F2F273178AD009EEE63 /* MAKEUPITEMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24349F2D273178AD009EEE63 /* MAKEUPITEMTableViewCell.swift */; };
+		24349F30273178AD009EEE63 /* MAKEUPITEMTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24349F2E273178AD009EEE63 /* MAKEUPITEMTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		24349F1C27315EBB009EEE63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24349F1F27315EBB009EEE63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24349F2127315EBB009EEE63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24349F2727317835009EEE63 /* MAKEUPTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAKEUPTableVC.swift; sourceTree = "<group>"; };
+		24349F2927317881009EEE63 /* MAKEUPBANNERTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAKEUPBANNERTableViewCell.swift; sourceTree = "<group>"; };
+		24349F2A27317881009EEE63 /* MAKEUPBANNERTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MAKEUPBANNERTableViewCell.xib; sourceTree = "<group>"; };
+		24349F2D273178AD009EEE63 /* MAKEUPITEMTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAKEUPITEMTableViewCell.swift; sourceTree = "<group>"; };
+		24349F2E273178AD009EEE63 /* MAKEUPITEMTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MAKEUPITEMTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +66,12 @@
 			children = (
 				24349F1327315EBA009EEE63 /* AppDelegate.swift */,
 				24349F1527315EBA009EEE63 /* SceneDelegate.swift */,
+				24349F2727317835009EEE63 /* MAKEUPTableVC.swift */,
+				24349F2927317881009EEE63 /* MAKEUPBANNERTableViewCell.swift */,
+				24349F2D273178AD009EEE63 /* MAKEUPITEMTableViewCell.swift */,
 				24349F1927315EBA009EEE63 /* Main.storyboard */,
+				24349F2E273178AD009EEE63 /* MAKEUPITEMTableViewCell.xib */,
+				24349F2A27317881009EEE63 /* MAKEUPBANNERTableViewCell.xib */,
 				24349F1C27315EBB009EEE63 /* Assets.xcassets */,
 				24349F1E27315EBB009EEE63 /* LaunchScreen.storyboard */,
 				24349F2127315EBB009EEE63 /* Info.plist */,
@@ -124,6 +139,8 @@
 			files = (
 				24349F2027315EBB009EEE63 /* LaunchScreen.storyboard in Resources */,
 				24349F1D27315EBB009EEE63 /* Assets.xcassets in Resources */,
+				24349F30273178AD009EEE63 /* MAKEUPITEMTableViewCell.xib in Resources */,
+				24349F2C27317881009EEE63 /* MAKEUPBANNERTableViewCell.xib in Resources */,
 				24349F1B27315EBA009EEE63 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +154,9 @@
 			files = (
 				24349F1427315EBA009EEE63 /* AppDelegate.swift in Sources */,
 				24349F1627315EBA009EEE63 /* SceneDelegate.swift in Sources */,
+				24349F2B27317881009EEE63 /* MAKEUPBANNERTableViewCell.swift in Sources */,
+				24349F2827317835009EEE63 /* MAKEUPTableVC.swift in Sources */,
+				24349F2F273178AD009EEE63 /* MAKEUPITEMTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

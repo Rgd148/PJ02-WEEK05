@@ -3,19 +3,20 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--MAKEUP-->
         <scene sceneID="0TJ-1Z-YBY">
             <objects>
                 <tableViewController id="CH9-AK-B6r" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="gWl-rC-4sO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Nzg-PZ-gKh">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
@@ -31,7 +32,14 @@
                             <outlet property="delegate" destination="CH9-AK-B6r" id="4iN-Nr-h3Z"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="fPT-M7-Bfq"/>
+                    <navigationItem key="navigationItem" title="MAKEUP" leftItemsSupplementBackButton="YES" id="fPT-M7-Bfq">
+                        <barButtonItem key="backBarButtonItem" title="back" id="GGd-s3-XKT"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="7ck-WY-lDS">
+                            <imageReference key="image" image="arrowshape.turn.up.backward.fill" catalog="system" symbolScale="medium"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Image-2" id="a79-g1-del"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qD-L1-UzE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HkH-C6-pKx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2178" y="232"/>
+            <point key="canvasLocation" x="-2910" y="214"/>
         </scene>
         <!--Account-->
         <scene sceneID="XJZ-bm-Sot">
@@ -69,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NaC-ev-oG4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055.072463768116" y="-749.33035714285711"/>
+            <point key="canvasLocation" x="-2261" y="-1406"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cNd-zT-o9a">
@@ -78,7 +86,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i0c-k9-egn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <color key="barTintColor" red="0.54891266490000001" green="0.3319775969" blue="0.49104492449999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.54891266490000001" green="0.3319775969" blue="0.49104492449999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="Hbc-Ga-1Xb" kind="relationship" relationship="viewControllers" id="jfn-Pr-DrU"/>
@@ -89,16 +100,16 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRy-ZG-XUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2177" y="-550"/>
+            <point key="canvasLocation" x="-2909" y="-620"/>
         </scene>
-        <!--Categories-->
+        <!--MAKEUP-->
         <scene sceneID="sgx-z9-r7R">
             <objects>
                 <tableViewController id="Ly2-Lv-fgX" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="MNJ-Jt-gBl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.54891266490000001" green="0.3319775969" blue="0.49104492449999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="QzX-mc-eH9">
@@ -115,13 +126,13 @@
                             <outlet property="delegate" destination="Ly2-Lv-fgX" id="DPE-QI-VhS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Categories" leftItemsSupplementBackButton="YES" id="Iej-TG-jGN">
+                    <navigationItem key="navigationItem" title="MAKEUP" leftItemsSupplementBackButton="YES" id="Iej-TG-jGN">
                         <barButtonItem key="backBarButtonItem" title="back" id="DI4-vr-dnd"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tg5-Dh-zqk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1665" y="-35"/>
+            <point key="canvasLocation" x="139" y="-239"/>
         </scene>
         <!--Categories-->
         <scene sceneID="BsV-Ys-7DT">
@@ -140,7 +151,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Vg-7K-ID0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="707" y="-35"/>
+            <point key="canvasLocation" x="-771" y="-239"/>
         </scene>
         <!--SKINCARE-->
         <scene sceneID="lgo-9U-l4H">
@@ -163,12 +174,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image-2" width="170" height="162"/>
+        <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
         <image name="home" width="50" height="52"/>
         <image name="menu-small" width="22" height="22"/>
         <image name="menubig" width="50" height="50"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
