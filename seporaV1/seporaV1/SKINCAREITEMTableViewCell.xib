@@ -58,7 +58,7 @@
                         <constraints>
                             <constraint firstAttribute="width" secondItem="6dT-a4-3WX" secondAttribute="height" multiplier="60:31" id="6Nq-Bs-YTc"/>
                         </constraints>
-                        <color key="tintColor" red="0.54891266490000001" green="0.3319775969" blue="0.49104492449999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.91709846258163452" green="0.27237331867218018" blue="0.38839924335479736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="filled" title="Add"/>
                         <connections>

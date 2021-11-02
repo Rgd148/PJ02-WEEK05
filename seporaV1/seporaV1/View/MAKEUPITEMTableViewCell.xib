@@ -35,9 +35,10 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i59-FB-jxy">
                         <rect key="frame" x="377" y="83.5" width="50" height="31"/>
                         <constraints>
+                            <constraint firstAttribute="width" secondItem="i59-FB-jxy" secondAttribute="height" multiplier="50:31" id="GyQ-up-BZu"/>
                             <constraint firstAttribute="width" constant="50" id="XsK-Jw-hRo"/>
                         </constraints>
-                        <color key="tintColor" red="0.54891266490000001" green="0.3319775969" blue="0.49104492449999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.91709846258163452" green="0.27237331867218018" blue="0.38839924335479736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="filled" title="Add"/>
                         <connections>
@@ -45,7 +46,7 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5x-WD-8gI">
-                        <rect key="frame" x="144" y="78.5" width="33" height="20.5"/>
+                        <rect key="frame" x="144" y="78.5" width="73" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -70,7 +71,7 @@
                     <constraint firstItem="8rx-d3-if1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" symbolic="YES" id="gHC-c8-NOV"/>
                     <constraint firstItem="TQj-n6-QHA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="hSz-KQ-RFX"/>
                     <constraint firstAttribute="trailing" secondItem="YMW-JE-yCz" secondAttribute="trailing" constant="10" id="jBG-oH-jmU"/>
-                    <constraint firstItem="i59-FB-jxy" firstAttribute="leading" secondItem="I5x-WD-8gI" secondAttribute="trailing" constant="200" id="pAy-Ef-HuJ"/>
+                    <constraint firstItem="i59-FB-jxy" firstAttribute="leading" secondItem="I5x-WD-8gI" secondAttribute="trailing" constant="160" id="pAy-Ef-HuJ"/>
                     <constraint firstAttribute="trailing" secondItem="i59-FB-jxy" secondAttribute="trailing" constant="8" id="q3U-11-4rd"/>
                     <constraint firstItem="I5x-WD-8gI" firstAttribute="top" secondItem="YMW-JE-yCz" secondAttribute="bottom" constant="9" id="wio-Y3-X6I"/>
                 </constraints>
