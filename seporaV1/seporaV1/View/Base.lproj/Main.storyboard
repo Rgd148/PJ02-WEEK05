@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MAKEUP-->
+        <!--SKINCARE-->
         <scene sceneID="0TJ-1Z-YBY">
             <objects>
-                <tableViewController id="CH9-AK-B6r" sceneMemberID="viewController">
+                <tableViewController id="CH9-AK-B6r" customClass="SKINCARETableVC" customModule="seporaV1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="gWl-rC-4sO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,7 @@
                             <outlet property="delegate" destination="CH9-AK-B6r" id="4iN-Nr-h3Z"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="MAKEUP" leftItemsSupplementBackButton="YES" id="fPT-M7-Bfq">
+                    <navigationItem key="navigationItem" title="SKINCARE" leftItemsSupplementBackButton="YES" id="fPT-M7-Bfq">
                         <barButtonItem key="backBarButtonItem" title="back" id="GGd-s3-XKT"/>
                         <barButtonItem key="leftBarButtonItem" title="Item" id="7ck-WY-lDS">
                             <imageReference key="image" image="arrowshape.turn.up.backward.fill" catalog="system" symbolScale="medium"/>
@@ -105,7 +105,7 @@
         <!--MAKEUP-->
         <scene sceneID="sgx-z9-r7R">
             <objects>
-                <tableViewController id="Ly2-Lv-fgX" sceneMemberID="viewController">
+                <tableViewController id="Ly2-Lv-fgX" customClass="MAKEUPTableVC" customModule="seporaV1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="MNJ-Jt-gBl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,7 +146,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Ly2-Lv-fgX" kind="relationship" relationship="rootViewController" id="nq7-ML-iI5"/>
+                        <segue destination="Ly2-Lv-fgX" kind="relationship" relationship="rootViewController" id="Kpf-fW-IgD"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Vg-7K-ID0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

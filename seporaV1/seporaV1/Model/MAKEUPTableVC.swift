@@ -20,8 +20,7 @@ class MAKEUPTableVC: UITableViewController {
     MakeupItems(Mname: "Palette", Mdec: "Eyestories Eyeshadow Palette", Mcost: 88, Mimage: UIImage(named: "palette")),
     MakeupItems(Mname: "Lipstick", Mdec: "Matte Revolution Lipstick", Mcost: 70, Mimage: UIImage(named: "Lipstick")),
     MakeupItems(Mname: "bareMinerals", Mdec: "Strength & Length Serum-Infused Mascara", Mcost: 113, Mimage: UIImage(named: "bareMinerals"))]
-    /*
-  (title: "CLINIQUE", details: " Take The Day Off Cleansing Balm Makeup Remover ", cost: 170, imagItem:UIImage(named: "CLINIQUE"))*/
+ 
     
 
     override func viewDidLoad() {
