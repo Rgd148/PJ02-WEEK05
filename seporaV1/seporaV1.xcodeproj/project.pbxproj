@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		243239FB27326CC600E029AF /* CartTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243239FA27326CC600E029AF /* CartTableVC.swift */; };
 		24349F1427315EBA009EEE63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24349F1327315EBA009EEE63 /* AppDelegate.swift */; };
 		24349F1627315EBA009EEE63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24349F1527315EBA009EEE63 /* SceneDelegate.swift */; };
 		24349F1B27315EBA009EEE63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24349F1927315EBA009EEE63 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		243239FA27326CC600E029AF /* CartTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableVC.swift; sourceTree = "<group>"; };
 		24349F1027315EBA009EEE63 /* seporaV1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seporaV1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24349F1327315EBA009EEE63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24349F1527315EBA009EEE63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,9 +93,10 @@
 			children = (
 				24349F3D2731DD1A009EEE63 /* LoginViewController.swift */,
 				24349F2727317835009EEE63 /* MAKEUPTableVC.swift */,
+				24349F332731AC25009EEE63 /* SKINCARETableVC.swift */,
+				243239FA27326CC600E029AF /* CartTableVC.swift */,
 				24349F2927317881009EEE63 /* MAKEUPBANNERTableViewCell.swift */,
 				24349F2D273178AD009EEE63 /* MAKEUPITEMTableViewCell.swift */,
-				24349F332731AC25009EEE63 /* SKINCARETableVC.swift */,
 				24349F352731AC55009EEE63 /* TSKINCAREBANNERTableViewCell.swift */,
 				24349F392731AC72009EEE63 /* SKINCAREITEMTableViewCell.swift */,
 			);
@@ -191,6 +194,7 @@
 				24349F3E2731DD1A009EEE63 /* LoginViewController.swift in Sources */,
 				24349F1427315EBA009EEE63 /* AppDelegate.swift in Sources */,
 				24349F1627315EBA009EEE63 /* SceneDelegate.swift in Sources */,
+				243239FB27326CC600E029AF /* CartTableVC.swift in Sources */,
 				24349F2B27317881009EEE63 /* MAKEUPBANNERTableViewCell.swift in Sources */,
 				24349F2827317835009EEE63 /* MAKEUPTableVC.swift in Sources */,
 				24349F3B2731AC72009EEE63 /* SKINCAREITEMTableViewCell.swift in Sources */,

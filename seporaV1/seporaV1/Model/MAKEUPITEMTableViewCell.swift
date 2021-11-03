@@ -7,6 +7,10 @@
 
 import UIKit
 
+//class cart: CartProduct{
+//    let Mcart(
+//}
+
 class MAKEUPITEMTableViewCell: UITableViewCell {
 
     @IBOutlet weak var MItemImage: UIImageView!
@@ -15,6 +19,8 @@ class MAKEUPITEMTableViewCell: UITableViewCell {
     @IBOutlet weak var MItemCost: UILabel!
 @IBAction func AddMItem(_ sender: Any) {
     }
+    
+    
     
     
     override func awakeFromNib() {

@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -252,6 +253,9 @@
                         <barButtonItem key="backBarButtonItem" title="back" id="DI4-vr-dnd"/>
                         <barButtonItem key="rightBarButtonItem" image="Image-8" id="qEQ-xH-yaL">
                             <color key="tintColor" red="0.91709846258163452" green="0.27237331867218018" blue="0.38839924335479736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="ZnW-mF-vfD" kind="show" id="gdv-OJ-AhP"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -259,21 +263,34 @@
             </objects>
             <point key="canvasLocation" x="139" y="-239"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="few-TM-uN8">
+        <!--Table View Controller-->
+        <scene sceneID="cHN-Wh-BWe">
             <objects>
-                <viewController id="iGM-cT-HIf" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6pX-qv-DYI">
+                <tableViewController id="ZnW-mF-vfD" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="4cB-5P-9Il">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vS1-cW-t4X"/>
-                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="rFY-ey-laC"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="09p-BL-ioC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="f8r-PU-O2v">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f8r-PU-O2v" id="0eS-rG-CWv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZnW-mF-vfD" id="SQu-w1-Kxi"/>
+                            <outlet property="delegate" destination="ZnW-mF-vfD" id="rcA-ta-evs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="dlJ-y7-dVW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZDO-p1-tAv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1487" y="-620"/>
+            <point key="canvasLocation" x="1517" y="-561"/>
         </scene>
         <!--MAKEUP-->
         <scene sceneID="BsV-Ys-7DT">
@@ -329,5 +346,8 @@
         <image name="burger" width="50" height="52"/>
         <image name="micon" width="78" height="68"/>
         <image name="seephora2" width="810" height="698"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
