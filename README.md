@@ -1,8 +1,8 @@
-#SEPHORA 
+# SEPHORA 
 
-##OverView
+## OverView
 
-###It’s an application for tow shops one for MAKEUP & one for SKINCARE , each of them has products 
+### It’s an application for tow shops one for MAKEUP & one for SKINCARE , each of them has products 
 
 
 
@@ -18,7 +18,7 @@
 * Category to collect the product from the same type
 
 
-##Tech
+## Tech
 * UIkit
 
 
