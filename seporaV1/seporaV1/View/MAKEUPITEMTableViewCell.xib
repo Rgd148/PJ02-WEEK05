@@ -75,6 +75,9 @@
                         <buttonConfiguration key="configuration" style="plain" image="minus.circle.fill" catalog="system">
                             <color key="baseForegroundColor" red="0.91709846258163452" green="0.27237331867218018" blue="0.38839924335479736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="Mminus:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Rg3-pf-CfY"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifO-nX-9Qc">
                         <rect key="frame" x="232" y="75" width="10" height="22"/>
@@ -85,6 +88,9 @@
                         <buttonConfiguration key="configuration" style="plain" image="plus.circle.fill" catalog="system">
                             <color key="baseForegroundColor" red="0.91709846258163452" green="0.27237331867218018" blue="0.38839924335479736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="Splus:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Mk2-iH-erq"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdZ-Da-jSI">
                         <rect key="frame" x="259" y="75" width="7" height="22"/>
@@ -129,6 +135,7 @@
                 <outlet property="MItemDec" destination="YMW-JE-yCz" id="PFz-AK-AD7"/>
                 <outlet property="MItemImage" destination="TQj-n6-QHA" id="vxf-yA-AIv"/>
                 <outlet property="MItemName" destination="8rx-d3-if1" id="hMF-Ia-p6x"/>
+                <outlet property="Mquantity" destination="tdZ-Da-jSI" id="KW0-kd-Em4"/>
             </connections>
             <point key="canvasLocation" x="125.38461538461539" y="43.720379146919427"/>
         </tableViewCell>

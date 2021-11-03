@@ -18,6 +18,24 @@ class MAKEUPITEMTableViewCell: UITableViewCell {
     
     var delegate: MCartDelegate!
     
+    var Mcounter = 0
+    @IBAction func Mminus(_ sender: Any) {
+        if (Mcounter == 0 ){
+            return Mquantity.text = String (Mcounter)
+        } else{
+            Mcounter -= 1
+            return Mquantity.text = String ( Mcounter)
+        }
+    }
+    @IBOutlet weak var Mquantity: UILabel!
+    
+
+    @IBAction func Splus(_ sender: Any) {
+        Mcounter += 1
+        Mquantity.text = String (Mcounter)
+        
+    }
+    
     @IBOutlet weak var MItemImage: UIImageView!
     @IBOutlet weak var MItemName: UILabel!
     @IBOutlet weak var MItemDec: UILabel!
