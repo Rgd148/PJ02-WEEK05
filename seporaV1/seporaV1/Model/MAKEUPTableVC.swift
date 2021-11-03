@@ -7,9 +7,6 @@
 
 import UIKit
 
-//protocol CartProduct {
-//
-//}
 
 struct MakeupItems {
     var Mname:String = ""
@@ -18,14 +15,21 @@ struct MakeupItems {
     var Mimage: UIImage?
 }
 
-class MAKEUPTableVC: UITableViewController {
+class MAKEUPTableVC: UITableViewController, MCartDelegate {
+    
+    func AddToCart(index: Int) {
+        MproductCart.append(Mproduct[index])
+    }
+    
+    var curIndex = 0
+    
     var Mproduct : [MakeupItems] = [MakeupItems(Mname: "Blush", Mdec: "A long-lasting, blendable, multiuse liquid pigment for your cheeks,  lips and eyes.", Mcost: 80, Mimage: UIImage(named: "s2440212.png")),
     MakeupItems(Mname: "Concealer", Mdec: "Soft Matte Complete Concealer", Mcost: 170, Mimage: UIImage(named: "concelar")),
     MakeupItems(Mname: "Palette", Mdec: "Eyestories Eyeshadow Palette", Mcost: 88, Mimage: UIImage(named: "palette")),
     MakeupItems(Mname: "Lipstick", Mdec: "Matte Revolution Lipstick", Mcost: 70, Mimage: UIImage(named: "Lipstick")),
     MakeupItems(Mname: "bareMinerals", Mdec: "Strength & Length Serum-Infused Mascara", Mcost: 113, Mimage: UIImage(named: "bareMinerals"))]
  
-    
+    var MproductCart = [MakeupItems]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,11 +76,15 @@ class MAKEUPTableVC: UITableViewController {
             
             cellMProduct.MItemCost.text = String(Mproduct[indexPath.row].Mcost)
             cellMProduct.MItemImage.image = Mproduct[indexPath.row].Mimage
-            
+            cellMProduct.myIndex = indexPath.row
+            cellMProduct.delegate = self
             return cellMProduct
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        curIndex = indexPath.row
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -115,14 +123,14 @@ class MAKEUPTableVC: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        let cartVC = segue.destination as! CartTableVC
+        cartVC.MproductCart = MproductCart
     }
-    */
-
 }

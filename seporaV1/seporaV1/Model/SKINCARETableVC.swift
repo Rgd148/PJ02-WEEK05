@@ -14,7 +14,12 @@ struct SkincareItems {
     var Simage: UIImage?
 }
 
-class SKINCARETableVC: UITableViewController {
+class SKINCARETableVC: UITableViewController, SCartDelegate {
+  
+    func AddToCart(index: Int) {
+        SproductCart.append(Sproduct[index])
+    }
+    
     var Sproduct : [SkincareItems] = [SkincareItems(Sname: "CLINIQUE", Sdec:  " Take The Day Off Cleansing Balm Makeup Remover ", Scost: 180, Simage: UIImage(named: "CLINIQUE")),
           SkincareItems(Sname: "Sephora skincare collection", Sdec: "Vitamin Face Mask Mango and vitamin B6 face mask", Scost: 50, Simage: UIImage(named: "skincare1")),
         SkincareItems(Sname: "Overnight Hair Mask", Sdec: "Nourishing, fortifying, shine, restructuring... our masks care for all types of hair!", Scost: 40, Simage: UIImage(named: "skincare2")),
@@ -22,8 +27,8 @@ class SKINCARETableVC: UITableViewController {
          SkincareItems(Sname: "Sephora Collection Hair Mask", Sdec: "Sephora Collection Hydrating Hair Mask", Scost: 35, Simage: UIImage(named: "skincare3"))]
     
    
-   
-  
+    var SproductCart = [SkincareItems]()
+    var cellIndex = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,16 +70,20 @@ class SKINCARETableVC: UITableViewController {
             
             
             cellSProduct.SItemName.text = Sproduct[indexPath.row].Sname
-            
             cellSProduct.SItemDec.text = Sproduct[indexPath.row].Sdec
-            
             cellSProduct.SItemCost.text = String(Sproduct[indexPath.row].Scost)
             cellSProduct.SItemImage.image = Sproduct[indexPath.row].Simage
-            
+            cellSProduct.myIndex = indexPath.row
+            cellSProduct.delegate = self
             return cellSProduct
         }
     
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        cellIndex = indexPath.row
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -111,14 +120,17 @@ class SKINCARETableVC: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        let skinCartVC = segue.destination as! CartTableVC
+        skinCartVC.SproductCart = SproductCart
     }
-    */
+    
 
 }

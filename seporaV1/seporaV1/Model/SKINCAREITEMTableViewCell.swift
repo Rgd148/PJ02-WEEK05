@@ -7,12 +7,22 @@
 
 import UIKit
 
+protocol SCartDelegate {
+    func AddToCart(index: Int)
+}
+
 class SKINCAREITEMTableViewCell: UITableViewCell {
+    
+    var delegate: SCartDelegate!
+
     @IBOutlet weak var SItemImage: UIImageView!
     @IBOutlet weak var SItemName: UILabel!
     @IBOutlet weak var SItemDec: UILabel!
     @IBOutlet weak var SItemCost: UILabel!
+    var myIndex = 0
+    
     @IBAction func AddSItem(_ sender: Any) {
+        delegate.AddToCart(index: myIndex)
     }
     
     

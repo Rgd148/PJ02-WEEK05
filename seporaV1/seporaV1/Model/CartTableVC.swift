@@ -7,13 +7,21 @@
 
 import UIKit
 
+
 class CartTableVC: UITableViewController {
 
+    var SproductCart = [SkincareItems]()
+    var MproductCart = [MakeupItems]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.register(UINib(nibName: "SKINCAREITEMTableViewCell", bundle: nil), forCellReuseIdentifier: "SItemID")
+        tableView.rowHeight = 160
+        
         tableView.register(UINib(nibName: "MAKEUPITEMTableViewCell", bundle: nil), forCellReuseIdentifier: "MItemID")
         tableView.rowHeight = 160
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -26,23 +34,39 @@ class CartTableVC: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if (section == 0) {
+            return SproductCart.count
+        } else {
+            return MproductCart.count
+        }
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        
+        if (indexPath.section == 0) {
+            let cellSProduct = tableView.dequeueReusableCell(withIdentifier: "SItemID") as! SKINCAREITEMTableViewCell
+            
+            cellSProduct.SItemName.text = SproductCart[indexPath.row].Sname
+            cellSProduct.SItemDec.text = SproductCart[indexPath.row].Sdec
+            cellSProduct.SItemCost.text = String(SproductCart[indexPath.row].Scost)
+            cellSProduct.SItemImage.image = SproductCart[indexPath.row].Simage
+            return cellSProduct
+        } else {
+            let cellMProduct = tableView.dequeueReusableCell(withIdentifier: "MItemID") as! MAKEUPITEMTableViewCell
+                     
+            cellMProduct.MItemName.text = MproductCart[indexPath.row].Mname
+            cellMProduct.MItemDec.text = MproductCart[indexPath.row].Mdec
+            cellMProduct.MItemCost.text = String(MproductCart[indexPath.row].Mcost)
+            cellMProduct.MItemImage.image = MproductCart[indexPath.row].Mimage
+            return cellMProduct
+        }
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

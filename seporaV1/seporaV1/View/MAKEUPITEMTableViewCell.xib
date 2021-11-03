@@ -93,7 +93,7 @@
                 <outlet property="MItemImage" destination="TQj-n6-QHA" id="vxf-yA-AIv"/>
                 <outlet property="MItemName" destination="8rx-d3-if1" id="hMF-Ia-p6x"/>
             </connections>
-            <point key="canvasLocation" x="126.81159420289856" y="43.861607142857139"/>
+            <point key="canvasLocation" x="125.38461538461539" y="43.720379146919427"/>
         </tableViewCell>
     </objects>
 </document>

@@ -33,7 +33,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="SKINCARE" leftItemsSupplementBackButton="YES" id="fPT-M7-Bfq">
                         <barButtonItem key="backBarButtonItem" title="back" id="GGd-s3-XKT"/>
-                        <barButtonItem key="rightBarButtonItem" image="Image-8" id="c6l-mj-qvZ"/>
+                        <barButtonItem key="rightBarButtonItem" image="Image-8" id="c6l-mj-qvZ">
+                            <connections>
+                                <segue destination="ZnW-mF-vfD" kind="show" identifier="SkinID" id="Mtv-Pc-Szu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qD-L1-UzE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -254,7 +258,7 @@
                         <barButtonItem key="rightBarButtonItem" image="Image-8" id="qEQ-xH-yaL">
                             <color key="tintColor" red="0.91709846258163452" green="0.27237331867218018" blue="0.38839924335479736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="ZnW-mF-vfD" kind="show" id="gdv-OJ-AhP"/>
+                                <segue destination="ZnW-mF-vfD" kind="show" id="8dK-Bm-rdX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -263,10 +267,10 @@
             </objects>
             <point key="canvasLocation" x="139" y="-239"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Cart TableVC-->
         <scene sceneID="cHN-Wh-BWe">
             <objects>
-                <tableViewController id="ZnW-mF-vfD" sceneMemberID="viewController">
+                <tableViewController id="ZnW-mF-vfD" customClass="CartTableVC" customModule="seporaV1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="4cB-5P-9Il">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -337,6 +341,9 @@
             <point key="canvasLocation" x="-771.01449275362324" y="-1142.4107142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Mtv-Pc-Szu"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Image-12" width="32" height="32"/>
         <image name="Image-4" width="32" height="32"/>

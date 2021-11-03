@@ -7,17 +7,23 @@
 
 import UIKit
 
-//class cart: CartProduct{
-//    let Mcart(
-//}
+
+protocol MCartDelegate {
+    func AddToCart(index: Int)
+}
+
 
 class MAKEUPITEMTableViewCell: UITableViewCell {
-
+    
+    var delegate: MCartDelegate!
+    
     @IBOutlet weak var MItemImage: UIImageView!
     @IBOutlet weak var MItemName: UILabel!
     @IBOutlet weak var MItemDec: UILabel!
     @IBOutlet weak var MItemCost: UILabel!
-@IBAction func AddMItem(_ sender: Any) {
+    var myIndex = 0
+    @IBAction func AddMItem(_ sender: Any) {
+        delegate.AddToCart(index: myIndex)
     }
     
     
