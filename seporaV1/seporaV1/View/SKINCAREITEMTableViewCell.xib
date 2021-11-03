@@ -55,6 +55,7 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dT-a4-3WX">
                         <rect key="frame" x="348" y="71" width="60" height="31"/>
+                        <color key="backgroundColor" red="0.92068594694137573" green="0.27983498573303223" blue="0.39829069375991821" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="6dT-a4-3WX" secondAttribute="height" multiplier="60:31" id="6Nq-Bs-YTc"/>
                         </constraints>
