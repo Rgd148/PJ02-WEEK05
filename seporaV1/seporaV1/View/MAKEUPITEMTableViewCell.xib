@@ -33,6 +33,19 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i59-FB-jxy">
+                        <rect key="frame" x="348" y="75" width="60" height="27"/>
+                        <color key="backgroundColor" red="0.92068594694137573" green="0.27983498573303223" blue="0.39829069375991821" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="i59-FB-jxy" secondAttribute="height" multiplier="20:9" id="5nb-TD-U7J"/>
+                        </constraints>
+                        <color key="tintColor" red="0.91709846258163452" green="0.27237331867218018" blue="0.38839924335479736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="filled" title="Add"/>
+                        <connections>
+                            <action selector="AddMItem:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="EyR-5V-DPH"/>
+                        </connections>
+                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5x-WD-8gI">
                         <rect key="frame" x="138" y="75.666666666666671" width="50" height="21"/>
                         <constraints>
@@ -53,37 +66,61 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i59-FB-jxy">
-                        <rect key="frame" x="348" y="75" width="60" height="27"/>
-                        <color key="backgroundColor" red="0.92068594694137573" green="0.27983498573303223" blue="0.39829069375991821" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKo-Ze-8IH">
+                        <rect key="frame" x="286" y="75" width="10" height="22"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="i59-FB-jxy" secondAttribute="height" multiplier="20:9" id="5nb-TD-U7J"/>
+                            <constraint firstAttribute="width" constant="10" id="hQK-Xf-kID"/>
                         </constraints>
-                        <color key="tintColor" red="0.91709846258163452" green="0.27237331867218018" blue="0.38839924335479736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="filled" title="Add"/>
-                        <connections>
-                            <action selector="AddMItem:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="EyR-5V-DPH"/>
-                        </connections>
+                        <buttonConfiguration key="configuration" style="plain" image="minus.circle.fill" catalog="system">
+                            <color key="baseForegroundColor" red="0.91709846258163452" green="0.27237331867218018" blue="0.38839924335479736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </buttonConfiguration>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifO-nX-9Qc">
+                        <rect key="frame" x="232" y="75" width="10" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="t3m-z7-5y0"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="plus.circle.fill" catalog="system">
+                            <color key="baseForegroundColor" red="0.91709846258163452" green="0.27237331867218018" blue="0.38839924335479736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </buttonConfiguration>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdZ-Da-jSI">
+                        <rect key="frame" x="259" y="75" width="7" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="i59-FB-jxy" firstAttribute="leading" secondItem="LKo-Ze-8IH" secondAttribute="trailing" constant="52" id="1Eu-ey-jLb"/>
+                    <constraint firstAttribute="bottom" secondItem="LKo-Ze-8IH" secondAttribute="bottom" constant="13" id="21p-9g-rxc"/>
+                    <constraint firstItem="tdZ-Da-jSI" firstAttribute="top" secondItem="YMW-JE-yCz" secondAttribute="bottom" constant="9" id="3G9-Tk-0ac"/>
                     <constraint firstItem="YMW-JE-yCz" firstAttribute="leading" secondItem="TQj-n6-QHA" secondAttribute="trailing" constant="8" id="3zj-1U-phf"/>
                     <constraint firstAttribute="bottom" secondItem="TQj-n6-QHA" secondAttribute="bottom" constant="13" id="49B-Wf-rdi"/>
                     <constraint firstAttribute="bottom" secondItem="i59-FB-jxy" secondAttribute="bottom" constant="8" id="4kR-NK-1op"/>
                     <constraint firstItem="i59-FB-jxy" firstAttribute="top" secondItem="YMW-JE-yCz" secondAttribute="bottom" constant="9" id="9Ff-Ca-RFq"/>
+                    <constraint firstAttribute="bottom" secondItem="ifO-nX-9Qc" secondAttribute="bottom" constant="13" id="Ecg-rL-x6g"/>
                     <constraint firstItem="8rx-d3-if1" firstAttribute="leading" secondItem="TQj-n6-QHA" secondAttribute="trailing" constant="8" id="Fzh-uU-fPb"/>
                     <constraint firstItem="I5x-WD-8gI" firstAttribute="top" secondItem="YMW-JE-yCz" secondAttribute="bottom" constant="9.5" id="GoO-Ge-LMO"/>
                     <constraint firstAttribute="trailing" secondItem="YMW-JE-yCz" secondAttribute="trailing" constant="8" id="Hru-Hd-y9m"/>
                     <constraint firstItem="I5x-WD-8gI" firstAttribute="leading" secondItem="TQj-n6-QHA" secondAttribute="trailing" constant="8" id="LYl-F4-V1l"/>
+                    <constraint firstItem="LKo-Ze-8IH" firstAttribute="leading" secondItem="tdZ-Da-jSI" secondAttribute="trailing" constant="20" id="M5W-qO-Q9h"/>
                     <constraint firstItem="8rx-d3-if1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="MOa-3b-Dyh"/>
+                    <constraint firstItem="tdZ-Da-jSI" firstAttribute="leading" secondItem="ifO-nX-9Qc" secondAttribute="trailing" constant="17" id="NZy-8J-WXn"/>
+                    <constraint firstAttribute="bottom" secondItem="tdZ-Da-jSI" secondAttribute="bottom" constant="13" id="OTq-MK-N1T"/>
                     <constraint firstItem="YMW-JE-yCz" firstAttribute="top" secondItem="8rx-d3-if1" secondAttribute="bottom" constant="10" id="RLP-DD-G7A"/>
+                    <constraint firstAttribute="bottom" secondItem="ifO-nX-9Qc" secondAttribute="bottom" constant="13" id="WOh-Sw-IHC"/>
                     <constraint firstAttribute="trailing" secondItem="i59-FB-jxy" secondAttribute="trailing" constant="10" id="eqp-bv-0UK"/>
                     <constraint firstItem="i59-FB-jxy" firstAttribute="leading" secondItem="I5x-WD-8gI" secondAttribute="trailing" constant="160" id="g1u-5K-gaI"/>
                     <constraint firstAttribute="bottom" secondItem="I5x-WD-8gI" secondAttribute="bottom" constant="13.5" id="gsW-dM-f9w"/>
                     <constraint firstItem="TQj-n6-QHA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="lLS-Mh-v2M"/>
+                    <constraint firstItem="LKo-Ze-8IH" firstAttribute="top" secondItem="YMW-JE-yCz" secondAttribute="bottom" constant="9" id="n8d-Kc-RQM"/>
+                    <constraint firstItem="ifO-nX-9Qc" firstAttribute="top" secondItem="YMW-JE-yCz" secondAttribute="bottom" constant="9" id="rsa-x1-egz"/>
                     <constraint firstItem="TQj-n6-QHA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="tr0-RY-OLd"/>
                     <constraint firstAttribute="trailing" secondItem="8rx-d3-if1" secondAttribute="trailing" constant="8" id="uQQ-02-ekF"/>
+                    <constraint firstItem="ifO-nX-9Qc" firstAttribute="leading" secondItem="I5x-WD-8gI" secondAttribute="trailing" constant="44" id="wxG-0z-y3N"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -96,4 +133,8 @@
             <point key="canvasLocation" x="125.38461538461539" y="43.720379146919427"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="minus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

@@ -13,8 +13,26 @@ protocol SCartDelegate {
 
 class SKINCAREITEMTableViewCell: UITableViewCell {
     
+    
     var delegate: SCartDelegate!
+    
+    var Scounter = 0
+    @IBAction func Sminus(_ sender: Any) {
+        if (Scounter == 0 ){
+            return quantity.text = String (Scounter)
+        } else{
+            Scounter -= 1
+            return quantity.text = String ( Scounter)
+        }
+    }
+    @IBOutlet weak var quantity: UILabel!
+    
 
+    @IBAction func Splus(_ sender: Any) {
+        Scounter += 1
+        quantity.text = String (Scounter)
+        
+    }
     @IBOutlet weak var SItemImage: UIImageView!
     @IBOutlet weak var SItemName: UILabel!
     @IBOutlet weak var SItemDec: UILabel!

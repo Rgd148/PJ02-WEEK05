@@ -6,12 +6,24 @@
 //
 
 import UIKit
-
+class cartProduct{
+    
+    var SproductCart = [SkincareItems]()
+    var MproductCart = [MakeupItems]()
+}
 
 class CartTableVC: UITableViewController {
 
-    var SproductCart = [SkincareItems]()
-    var MproductCart = [MakeupItems]()
+    @IBAction func DeleteAll(_ sender: Any) {
+        classcartProduct.SproductCart.removeAll()
+        classcartProduct.MproductCart.removeAll()
+        tableView.reloadData()
+    }
+    
+
+    var classcartProduct = cartProduct()
+   
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,9 +52,9 @@ class CartTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if (section == 0) {
-            return SproductCart.count
+            return classcartProduct.SproductCart.count
         } else {
-            return MproductCart.count
+            return classcartProduct.MproductCart.count
         }
     }
     
@@ -51,18 +63,18 @@ class CartTableVC: UITableViewController {
         if (indexPath.section == 0) {
             let cellSProduct = tableView.dequeueReusableCell(withIdentifier: "SItemID") as! SKINCAREITEMTableViewCell
             
-            cellSProduct.SItemName.text = SproductCart[indexPath.row].Sname
-            cellSProduct.SItemDec.text = SproductCart[indexPath.row].Sdec
-            cellSProduct.SItemCost.text = String(SproductCart[indexPath.row].Scost)
-            cellSProduct.SItemImage.image = SproductCart[indexPath.row].Simage
+            cellSProduct.SItemName.text =  classcartProduct.SproductCart[indexPath.row].Sname
+            cellSProduct.SItemDec.text =  classcartProduct.SproductCart[indexPath.row].Sdec
+            cellSProduct.SItemCost.text = String( classcartProduct.SproductCart[indexPath.row].Scost)
+            cellSProduct.SItemImage.image =  classcartProduct.SproductCart[indexPath.row].Simage
             return cellSProduct
         } else {
             let cellMProduct = tableView.dequeueReusableCell(withIdentifier: "MItemID") as! MAKEUPITEMTableViewCell
                      
-            cellMProduct.MItemName.text = MproductCart[indexPath.row].Mname
-            cellMProduct.MItemDec.text = MproductCart[indexPath.row].Mdec
-            cellMProduct.MItemCost.text = String(MproductCart[indexPath.row].Mcost)
-            cellMProduct.MItemImage.image = MproductCart[indexPath.row].Mimage
+            cellMProduct.MItemName.text =  classcartProduct.MproductCart[indexPath.row].Mname
+            cellMProduct.MItemDec.text =  classcartProduct.MproductCart[indexPath.row].Mdec
+            cellMProduct.MItemCost.text = String( classcartProduct.MproductCart[indexPath.row].Mcost)
+            cellMProduct.MItemImage.image =  classcartProduct.MproductCart[indexPath.row].Mimage
             return cellMProduct
         }
     }
@@ -76,17 +88,31 @@ class CartTableVC: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//          if editingStyle == .delete {
+//            classcartProduct.SproductCart.remove(at: indexPath.row)
+////            classcartProduct.MproductCart.remove(at: indexPath.row)
+//           
+//            tableView.reloadData()
+//      }
+//        //else {
+////            classcartProduct.MproductCart.remove(at: indexPath.row)
+////            tableView.reloadData()
+////        }
+//    }
+    
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            classcartProduct.MproductCart.remove(at: indexPath.row)
+//            tableView.reloadData()
+//        }
+//    }
+    
+    
+    
+    
 
     /*
     // Override to support rearranging the table view.

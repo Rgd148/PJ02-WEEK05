@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        writeName.text = userdefaults.string(forKey: "Username")
+//        writeName.text = userdefaults.string(forKey: "Username")
 
         // Do any additional setup after loading the view.
     }

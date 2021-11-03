@@ -18,7 +18,7 @@ struct MakeupItems {
 class MAKEUPTableVC: UITableViewController, MCartDelegate {
     
     func AddToCart(index: Int) {
-        MproductCart.append(Mproduct[index])
+       MproductCart.append(Mproduct[index])
     }
     
     var curIndex = 0
@@ -96,17 +96,17 @@ class MAKEUPTableVC: UITableViewController, MCartDelegate {
 
     
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            Mproduct.remove(at: indexPath.row)
-            
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
-        tableView.reloadData()
-    }
-    
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            Mproduct.remove(at: indexPath.row)
+//            
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//        } else if editingStyle == .insert {
+//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+//        }
+//        tableView.reloadData()
+//    }
+//    
 
     /*
     // Override to support rearranging the table view.
@@ -131,6 +131,6 @@ class MAKEUPTableVC: UITableViewController, MCartDelegate {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         let cartVC = segue.destination as! CartTableVC
-        cartVC.MproductCart = MproductCart
+        cartVC.classcartProduct.MproductCart = MproductCart
     }
 }

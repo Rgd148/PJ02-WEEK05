@@ -15,6 +15,7 @@ protocol MCartDelegate {
 
 class MAKEUPITEMTableViewCell: UITableViewCell {
     
+    
     var delegate: MCartDelegate!
     
     @IBOutlet weak var MItemImage: UIImageView!
@@ -25,6 +26,8 @@ class MAKEUPITEMTableViewCell: UITableViewCell {
     @IBAction func AddMItem(_ sender: Any) {
         delegate.AddToCart(index: myIndex)
     }
+    
+    
     
     
     

@@ -94,15 +94,15 @@ class SKINCARETableVC: UITableViewController, SCartDelegate {
 
     
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            Sproduct.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            tableView.reloadData()
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            Sproduct.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//        } else if editingStyle == .insert {
+//            tableView.reloadData()
+//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+//        }    
+//    }
    
 
     /*
@@ -129,7 +129,7 @@ class SKINCARETableVC: UITableViewController, SCartDelegate {
         // Pass the selected object to the new view controller.
         
         let skinCartVC = segue.destination as! CartTableVC
-        skinCartVC.SproductCart = SproductCart
+        skinCartVC.classcartProduct.SproductCart = SproductCart
     }
     
 
