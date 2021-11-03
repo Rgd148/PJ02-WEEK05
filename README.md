@@ -2,7 +2,7 @@
 
 ## OverView
 
-### It’s an application for tow shops one for MAKEUP & one for SKINCARE , each of them has products 
+### It’s an application for two shops one for MAKEUP & one for SKINCARE , each of them has products 
 
 
 
