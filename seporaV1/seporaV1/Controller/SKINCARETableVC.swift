@@ -1,5 +1,5 @@
 //
-//  MAKEUPTableVC.swift
+//  SKINCARETableVC.swift
 //  seporaV1
 //
 //  Created by Raghad Alahmadi on 27/03/1443 AH.
@@ -8,35 +8,30 @@
 import UIKit
 
 
-struct MakeupItems {
-    var Mname:String = ""
-    var Mdec:String = " "
-    var Mcost: Double = 0
-    var Mimage: UIImage?
-}
 
-class MAKEUPTableVC: UITableViewController, MCartDelegate {
-    
+class SKINCARETableVC: UITableViewController, SCartDelegate {
+  
     func AddToCart(index: Int) {
-       MproductCart.append(Mproduct[index])
+        SproductCart.append(Sproduct[index])
     }
     
-    var curIndex = 0
+    var Sproduct : [SkincareShop] = [SkincareShop(Sname: "CLINIQUE", Sdec:  " Take The Day Off Cleansing Balm Makeup Remover ", Scost: 180, Simage: UIImage(named: "CLINIQUE")),
+  SkincareShop(Sname: "Sephora skincare collection", Sdec: "Vitamin Face Mask Mango and vitamin B6 face mask", Scost: 50, Simage: UIImage(named: "skincare1")),
+ SkincareShop(Sname: "Overnight Hair Mask", Sdec: "Nourishing, fortifying, shine, restructuring... our masks care for all types of hair!", Scost: 40, Simage: UIImage(named: "skincare2")),
+  SkincareShop(Sname: "Hydrating Hair Mask", Sdec: "An hydrating mask that takes care of your hair", Scost: 70, Simage: UIImage(named: "hair3")),
+SkincareShop(Sname: "Sephora Collection Hair Mask", Sdec: "Sephora Collection Hydrating Hair Mask", Scost: 35, Simage: UIImage(named: "skincare3"))]
     
-    var Mproduct : [MakeupItems] = [MakeupItems(Mname: "Blush", Mdec: "A long-lasting, blendable, multiuse liquid pigment for your cheeks,  lips and eyes.", Mcost: 80, Mimage: UIImage(named: "s2440212.png")),
-    MakeupItems(Mname: "Concealer", Mdec: "Soft Matte Complete Concealer", Mcost: 170, Mimage: UIImage(named: "concelar")),
-    MakeupItems(Mname: "Palette", Mdec: "Eyestories Eyeshadow Palette", Mcost: 88, Mimage: UIImage(named: "palette")),
-    MakeupItems(Mname: "Lipstick", Mdec: "Matte Revolution Lipstick", Mcost: 70, Mimage: UIImage(named: "Lipstick")),
-    MakeupItems(Mname: "bareMinerals", Mdec: "Strength & Length Serum-Infused Mascara", Mcost: 113, Mimage: UIImage(named: "bareMinerals"))]
- 
-    var MproductCart = [MakeupItems]()
+   
+    var SproductCart = [SkincareShop]()
+    var cellIndex = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "MAKEUPBANNERTableViewCell", bundle: nil), forCellReuseIdentifier: "MBannerID")
+       
+        tableView.register(UINib(nibName: "TSKINCAREBANNERTableViewCell", bundle: nil), forCellReuseIdentifier: "SBannerID")
         
         
-        tableView.register(UINib(nibName: "MAKEUPITEMTableViewCell", bundle: nil), forCellReuseIdentifier: "MItemID")
+        tableView.register(UINib(nibName: "SKINCAREITEMTableViewCell", bundle: nil), forCellReuseIdentifier: "SItemID")
         tableView.rowHeight = 160
     }
 
@@ -52,40 +47,38 @@ class MAKEUPTableVC: UITableViewController, MCartDelegate {
         if section == 0 {
             return 1
         } else {
-            return Mproduct.count
+            return Sproduct.count
         }
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
         if indexPath.section == 0 {
-        let cellBanner = tableView.dequeueReusableCell(withIdentifier: "MBannerID") as! MAKEUPBANNERTableViewCell
+        let cellSBanner = tableView.dequeueReusableCell(withIdentifier: "SBannerID") as! TSKINCAREBANNERTableViewCell
         
-            return cellBanner
+            return cellSBanner
             
         }
         else {
-   let cellMProduct = tableView.dequeueReusableCell(withIdentifier: "MItemID") as! MAKEUPITEMTableViewCell
+   let cellSProduct = tableView.dequeueReusableCell(withIdentifier: "SItemID") as! SKINCAREITEMTableViewCell
             
             
-            cellMProduct.MItemName.text = Mproduct[indexPath.row].Mname
-            
-            cellMProduct.MItemDec.text = Mproduct[indexPath.row].Mdec
-            
-            cellMProduct.MItemCost.text = String(Mproduct[indexPath.row].Mcost)
-            cellMProduct.MItemImage.image = Mproduct[indexPath.row].Mimage
-            cellMProduct.myIndex = indexPath.row
-            cellMProduct.delegate = self
-            return cellMProduct
+            cellSProduct.SItemName.text = Sproduct[indexPath.row].Sname
+            cellSProduct.SItemDec.text = Sproduct[indexPath.row].Sdec
+            cellSProduct.SItemCost.text = String(Sproduct[indexPath.row].Scost)
+            cellSProduct.SItemImage.image = Sproduct[indexPath.row].Simage
+            cellSProduct.myIndex = indexPath.row
+            cellSProduct.delegate = self
+            return cellSProduct
         }
+    
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        curIndex = indexPath.row
+        cellIndex = indexPath.row
     }
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -98,15 +91,14 @@ class MAKEUPTableVC: UITableViewController, MCartDelegate {
     // Override to support editing the table view.
 //    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 //        if editingStyle == .delete {
-//            Mproduct.remove(at: indexPath.row)
-//            
+//            Sproduct.remove(at: indexPath.row)
 //            tableView.deleteRows(at: [indexPath], with: .fade)
 //        } else if editingStyle == .insert {
+//            tableView.reloadData()
 //            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-//        }
-//        tableView.reloadData()
+//        }    
 //    }
-//    
+   
 
     /*
     // Override to support rearranging the table view.
@@ -130,7 +122,10 @@ class MAKEUPTableVC: UITableViewController, MCartDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let cartVC = segue.destination as! CartTableVC
-        cartVC.classcartProduct.MproductCart = MproductCart
+        
+        let skinCartVC = segue.destination as! CartTableVC
+        skinCartVC.classcartProduct.SproductCart = SproductCart
     }
+    
+
 }

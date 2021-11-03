@@ -6,11 +6,7 @@
 //
 
 import UIKit
-class cartProduct{
-    
-    var SproductCart = [SkincareItems]()
-    var MproductCart = [MakeupItems]()
-}
+
 
 class CartTableVC: UITableViewController {
 
