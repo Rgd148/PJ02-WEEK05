@@ -7,33 +7,26 @@
 
 import UIKit
 
-struct SkincareShop {
-    var Sname:String = ""
-    var Sdec:String = " "
-    var Scost: Double = 0
-    var Simage: UIImage?
-}
-
 
 class SKINCARETableVC: UITableViewController, SCartDelegate {
-  
+    var shop : SeporaShops!
+    
     func AddToCart(index: Int) {
         SproductCart.append(Sproduct[index])
     }
     
-    var Sproduct : [SkincareShop] = [SkincareShop(Sname: "CLINIQUE", Sdec:  " Take The Day Off Cleansing Balm Makeup Remover ", Scost: 180, Simage: UIImage(named: "CLINIQUE")),
-  SkincareShop(Sname: "Sephora skincare collection", Sdec: "Vitamin Face Mask Mango and vitamin B6 face mask", Scost: 50, Simage: UIImage(named: "skincare1")),
- SkincareShop(Sname: "Overnight Hair Mask", Sdec: "Nourishing, fortifying, shine, restructuring... our masks care for all types of hair!", Scost: 40, Simage: UIImage(named: "skincare2")),
-  SkincareShop(Sname: "Hydrating Hair Mask", Sdec: "An hydrating mask that takes care of your hair", Scost: 70, Simage: UIImage(named: "hair3")),
-SkincareShop(Sname: "Sephora Collection Hair Mask", Sdec: "Sephora Collection Hydrating Hair Mask", Scost: 35, Simage: UIImage(named: "skincare3"))]
+    var Sproduct : [SkincareShop]!
     
    
     var SproductCart = [SkincareShop]()
     var cellIndex = 0
-
+    override func viewWillAppear(_ animated: Bool) {
+        Sproduct = shop.SkincareProducts
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        Sproduct = shop.SkincareProducts
+
         tableView.register(UINib(nibName: "TSKINCAREBANNERTableViewCell", bundle: nil), forCellReuseIdentifier: "SBannerID")
         
         

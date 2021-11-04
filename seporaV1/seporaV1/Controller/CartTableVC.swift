@@ -82,7 +82,7 @@ class CartTableVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if(editingStyle == UITableViewCell.EditingStyle.delete){
-            SproductCart.remove(at: index_Path)
+            MproductCart.remove(at: indexPath.row)
           tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
         tableView.reloadData()

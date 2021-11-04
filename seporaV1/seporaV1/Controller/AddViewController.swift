@@ -8,14 +8,18 @@
 import UIKit
 
 class AddViewController: UIViewController {
+    var sepShop : SeporaShops!
     
+    @IBOutlet weak var productTtitle: UITextField!
     
+    @IBOutlet weak var productDescription: UITextField!
+    @IBOutlet weak var productPrice: UITextField!
+
     @IBAction func AddProduct(_ sender: Any) {
-      
-        
-        
+        sepShop.MakeupProducts.append(MakeupShop(Mname: productTtitle.text!, Mdec: productDescription.text!, Mcost: Double(productPrice.text!)!, Mimage: nil))
+        productPrice.keyboardType = .numberPad
     
-//        navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
         
     }
     

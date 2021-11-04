@@ -26,6 +26,7 @@
 		24349F3B2731AC72009EEE63 /* SKINCAREITEMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24349F392731AC72009EEE63 /* SKINCAREITEMTableViewCell.swift */; };
 		24349F3C2731AC72009EEE63 /* SKINCAREITEMTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24349F3A2731AC72009EEE63 /* SKINCAREITEMTableViewCell.xib */; };
 		24349F3E2731DD1A009EEE63 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24349F3D2731DD1A009EEE63 /* LoginViewController.swift */; };
+		2441D6D92733D834007DD838 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2441D6D82733D834007DD838 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		24349F392731AC72009EEE63 /* SKINCAREITEMTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKINCAREITEMTableViewCell.swift; sourceTree = "<group>"; };
 		24349F3A2731AC72009EEE63 /* SKINCAREITEMTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SKINCAREITEMTableViewCell.xib; sourceTree = "<group>"; };
 		24349F3D2731DD1A009EEE63 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2441D6D82733D834007DD838 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		24349F1227315EBA009EEE63 /* seporaV1 */ = {
 			isa = PBXGroup;
 			children = (
+				2441D6D72733D823007DD838 /* Model */,
 				243239FD27330AED00E029AF /* Controller */,
 				24349F322731AA88009EEE63 /* View */,
 				24349F1C27315EBB009EEE63 /* Assets.xcassets */,
@@ -120,6 +123,14 @@
 				24349F3A2731AC72009EEE63 /* SKINCAREITEMTableViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2441D6D72733D823007DD838 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2441D6D82733D834007DD838 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +214,7 @@
 				24349F1627315EBA009EEE63 /* SceneDelegate.swift in Sources */,
 				24323A012733146800E029AF /* RegisterViewController.swift in Sources */,
 				243239FB27326CC600E029AF /* CartTableVC.swift in Sources */,
+				2441D6D92733D834007DD838 /* Model.swift in Sources */,
 				24349F2B27317881009EEE63 /* MAKEUPBANNERTableViewCell.swift in Sources */,
 				24349F2827317835009EEE63 /* MAKEUPTableVC.swift in Sources */,
 				24349F3B2731AC72009EEE63 /* SKINCAREITEMTableViewCell.swift in Sources */,

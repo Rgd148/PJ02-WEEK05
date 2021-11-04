@@ -6,29 +6,27 @@
 //
 
 import UIKit
-struct MakeupShop {
-    var Mname:String = ""
-    var Mdec:String = " "
-    var Mcost: Double = 0
-    var Mimage: UIImage?
-}
+
 
 class MAKEUPTableVC: UITableViewController, MCartDelegate {
-    
+
     func AddToCart(index: Int) {
        MproductCart.append(Mproduct[index])
     }
     var curIndex = 0
-    var Mproduct : [MakeupShop] = [MakeupShop(Mname: "Blush", Mdec: "A long-lasting, blendable, multiuse liquid pigment for your cheeks,  lips and eyes.", Mcost: 80, Mimage: UIImage(named: "s2440212.png")),
-         MakeupShop(Mname: "Concealer", Mdec: "Soft Matte Complete Concealer", Mcost: 170, Mimage: UIImage(named: "concelar")),
-         MakeupShop(Mname: "Palette", Mdec: "Eyestories Eyeshadow Palette", Mcost: 88, Mimage: UIImage(named: "palette")),
-       MakeupShop(Mname: "Lipstick", Mdec: "Matte Revolution Lipstick", Mcost: 70, Mimage: UIImage(named: "Lipstick")),
-        MakeupShop(Mname: "bareMinerals", Mdec: "Strength & Length Serum-Infused Mascara", Mcost: 113, Mimage: UIImage(named: "bareMinerals"))]
+    var shop : SeporaShops!
+    var Mproduct : [MakeupShop]!
  
     var MproductCart = [MakeupShop]()
+    override func viewWillAppear(_ animated: Bool) {
+        Mproduct = shop.MakeupProducts
 
+        tableView.reloadData()
+        print(Mproduct)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        Mproduct = shop.MakeupProducts
         tableView.register(UINib(nibName: "MAKEUPBANNERTableViewCell", bundle: nil), forCellReuseIdentifier: "MBannerID")
         
         
@@ -126,7 +124,13 @@ class MAKEUPTableVC: UITableViewController, MCartDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let cartVC = segue.destination as! CartTableVC
-        cartVC.MproductCart = MproductCart
+        if segue.identifier == "goToCart"{
+            let cartVC = segue.destination as! CartTableVC
+            cartVC.MproductCart = MproductCart
+        } else if segue.identifier == "goToNewProduct" {
+            let addVC = segue.destination as! AddViewController
+            addVC.sepShop = shop
+        }
+ 
     }
 }
