@@ -18,7 +18,7 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skincare" translatesAutoresizingMaskIntoConstraints="NO" id="CoX-Z1-yRG">
                         <rect key="frame" x="0.0" y="0.0" width="351" height="94"/>
-                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.14322917660000001" green="0.14322917660000001" blue="0.14322917660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </imageView>
                 </subviews>
                 <constraints>

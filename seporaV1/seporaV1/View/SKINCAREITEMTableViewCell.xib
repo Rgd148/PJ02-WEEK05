@@ -99,6 +99,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="AQm-MF-31C" firstAttribute="top" secondItem="ga9-zR-CRt" secondAttribute="bottom" constant="9" id="62e-My-UXs"/>
                     <constraint firstAttribute="bottom" secondItem="ElX-eG-nBD" secondAttribute="bottom" constant="13" id="83S-aM-mW7"/>

@@ -7,6 +7,12 @@
 
 import UIKit
 
+struct SkincareShop {
+    var Sname:String = ""
+    var Sdec:String = " "
+    var Scost: Double = 0
+    var Simage: UIImage?
+}
 
 
 class SKINCARETableVC: UITableViewController, SCartDelegate {
@@ -119,13 +125,11 @@ SkincareShop(Sname: "Sephora Collection Hair Mask", Sdec: "Sephora Collection Hy
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        
-        let skinCartVC = segue.destination as! CartTableVC
-        skinCartVC.classcartProduct.SproductCart = SproductCart
-    }
+
+
+    
+    
+    
     
 
 }

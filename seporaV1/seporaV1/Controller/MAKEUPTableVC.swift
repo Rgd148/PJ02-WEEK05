@@ -6,18 +6,19 @@
 //
 
 import UIKit
-
-
-
+struct MakeupShop {
+    var Mname:String = ""
+    var Mdec:String = " "
+    var Mcost: Double = 0
+    var Mimage: UIImage?
+}
 
 class MAKEUPTableVC: UITableViewController, MCartDelegate {
     
     func AddToCart(index: Int) {
        MproductCart.append(Mproduct[index])
     }
-    
     var curIndex = 0
-    
     var Mproduct : [MakeupShop] = [MakeupShop(Mname: "Blush", Mdec: "A long-lasting, blendable, multiuse liquid pigment for your cheeks,  lips and eyes.", Mcost: 80, Mimage: UIImage(named: "s2440212.png")),
          MakeupShop(Mname: "Concealer", Mdec: "Soft Matte Complete Concealer", Mcost: 170, Mimage: UIImage(named: "concelar")),
          MakeupShop(Mname: "Palette", Mdec: "Eyestories Eyeshadow Palette", Mcost: 88, Mimage: UIImage(named: "palette")),
@@ -126,6 +127,6 @@ class MAKEUPTableVC: UITableViewController, MCartDelegate {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         let cartVC = segue.destination as! CartTableVC
-        cartVC.classcartProduct.MproductCart = MproductCart
+        cartVC.MproductCart = MproductCart
     }
 }

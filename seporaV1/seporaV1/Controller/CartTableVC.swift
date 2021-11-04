@@ -8,17 +8,22 @@
 import UIKit
 
 
+
+
 class CartTableVC: UITableViewController {
+    
+    var SproductCart = [SkincareShop]()
+    var MproductCart = [MakeupShop]()
+    var index_Path = 0
 
     @IBAction func DeleteAll(_ sender: Any) {
-        classcartProduct.SproductCart.removeAll()
-        classcartProduct.MproductCart.removeAll()
+     SproductCart.removeAll()
+    MproductCart.removeAll()
         tableView.reloadData()
     }
     
 
-    var classcartProduct = cartProduct()
-   
+
    
     
     override func viewDidLoad() {
@@ -48,9 +53,9 @@ class CartTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if (section == 0) {
-            return classcartProduct.SproductCart.count
+            return SproductCart.count
         } else {
-            return classcartProduct.MproductCart.count
+            return MproductCart.count
         }
     }
     
@@ -59,23 +64,45 @@ class CartTableVC: UITableViewController {
         if (indexPath.section == 0) {
             let cellSProduct = tableView.dequeueReusableCell(withIdentifier: "SItemID") as! SKINCAREITEMTableViewCell
             
-            cellSProduct.SItemName.text =  classcartProduct.SproductCart[indexPath.row].Sname
-            cellSProduct.SItemDec.text =  classcartProduct.SproductCart[indexPath.row].Sdec
-            cellSProduct.SItemCost.text = String( classcartProduct.SproductCart[indexPath.row].Scost)
-            cellSProduct.SItemImage.image =  classcartProduct.SproductCart[indexPath.row].Simage
+            cellSProduct.SItemName.text =  SproductCart[indexPath.row].Sname
+            cellSProduct.SItemDec.text = SproductCart[indexPath.row].Sdec
+            cellSProduct.SItemCost.text = String( SproductCart[indexPath.row].Scost)
+            cellSProduct.SItemImage.image =  SproductCart[indexPath.row].Simage
             return cellSProduct
         } else {
             let cellMProduct = tableView.dequeueReusableCell(withIdentifier: "MItemID") as! MAKEUPITEMTableViewCell
                      
-            cellMProduct.MItemName.text =  classcartProduct.MproductCart[indexPath.row].Mname
-            cellMProduct.MItemDec.text =  classcartProduct.MproductCart[indexPath.row].Mdec
-            cellMProduct.MItemCost.text = String( classcartProduct.MproductCart[indexPath.row].Mcost)
-            cellMProduct.MItemImage.image =  classcartProduct.MproductCart[indexPath.row].Mimage
+            cellMProduct.MItemName.text =  MproductCart[indexPath.row].Mname
+            cellMProduct.MItemDec.text =  MproductCart[indexPath.row].Mdec
+            cellMProduct.MItemCost.text = String( MproductCart[indexPath.row].Mcost)
+            cellMProduct.MItemImage.image =  MproductCart[indexPath.row].Mimage
             return cellMProduct
         }
     }
-    
 
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if(editingStyle == UITableViewCell.EditingStyle.delete){
+            SproductCart.remove(at: index_Path)
+          tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        }
+        tableView.reloadData()
+      }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt x: IndexPath) {
+        
+        index_Path = x.row
+            }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if (segue.identifier == "AddSegue"){
+        let skinCartVC = segue.destination as! CartTableVC
+        skinCartVC.SproductCart = SproductCart
+    }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
