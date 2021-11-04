@@ -5,13 +5,27 @@
 ### It’s an application for two shops one for MAKEUP & one for SKINCARE , each of them has products 
 
 
+## Usge
+
+
+* UIViewController
+*  UITableViewController
+*  UITableViewCell
+* Protocol
+* Class
+* Struct
+* Function
+* Array
 
 ## How to use the App:
-* Create account in Sephora app (fullname, username, password)
-* Brows MAKEUP Shop 
-* Brows SKINCARE Shop 
+* Login to your account in Sephora app ( username, password)
+* Brows MAKEUP Shop Items
+* Brows SKINCARE Shop I
 * Add product to the cart
-* Show the cart
+* Delete product from cart
+* Delete all products
+* Edite Quintity (Increase or decrease)
+
 
 ## Upcoming features
 * Total price
